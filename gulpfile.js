@@ -11,5 +11,10 @@ function html() {
             .pipe(gulp.dest('dist'));
 };
 
+function watch() {
+	return gulp.watch(paths.html, gulp.series(html));
+}
+
 exports.html = html;
-exports.default = gulp.series(html);
+exports.watch = watch;
+exports.default = gulp.series(html, watch);
