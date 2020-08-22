@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/grkopiec/Easterlies#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.12",
     "gulp": "^4.0.2"
   }
 }

@@ -1,6 +1,7 @@
-var gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const gulp = require('gulp');
 
-var paths = {
+const paths = {
     html: [
         'app/**/*.html'
     ]
@@ -12,9 +13,18 @@ function html() {
 };
 
 function watch() {
-	return gulp.watch(paths.html, gulp.series(html));
-}
+	gulp.watch(paths.html, gulp.series(html));
+};
+
+function serve() {
+	return browserSync.init({
+		watch: true,
+		server: './dist'
+	});
+};
 
 exports.html = html;
 exports.watch = watch;
-exports.default = gulp.series(html, watch);
+exports.serve = serve;
+exports.build = gulp.series(html);
+exports.default = gulp.parallel(watch, serve);
