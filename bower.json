@@ -1,0 +1,14 @@
+{
+  "name": "easterlies",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Grzegorz Kopiec"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/grkopiec/easterlies",
+  "devDependencies": {
+    "jquery": "^3.5.1",
+    "bootstrap-sass": "^3.4.1"
+  }
+}
