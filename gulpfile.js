@@ -15,10 +15,13 @@ const paths = {
     ],
     js: [
         'bower_components/jquery/dist/jquery.js',
-        'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
+        'bower_components/bootstrap/dist/js/bootstrap.js'
     ],
     jsWatch: [
         'app/scripts/**/*.js'
+    ],
+    images: [
+        'app/images/**/*.*'
     ]
 };
 
@@ -30,6 +33,7 @@ function html() {
 function sass() {
     return gulp.src(paths.sass)
             .pipe(gulpSass())
+            .pipe(gulpConcat('styles.css'))
             .pipe(gulp.dest('dist'));
 };
 
@@ -37,6 +41,11 @@ function js() {
     return gulp.src(paths.js)
             .pipe(gulpConcat('scripts.js'))
             .pipe(gulp.dest('dist'));
+};
+
+function images() {
+    return gulp.src(paths.images)
+            .pipe(gulp.dest('dist/images'));
 };
 
 function watch() {
@@ -55,7 +64,8 @@ function serve() {
 exports.html = html;
 exports.sass = sass;
 exports.js = js;
+exports.images = images;
 exports.watch = watch;
 exports.serve = serve;
-exports.build = gulp.series(html, sass, js);
+exports.build = gulp.series(html, sass, js, images);
 exports.default = gulp.parallel(watch, serve);
