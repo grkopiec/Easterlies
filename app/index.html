@@ -11,8 +11,8 @@
 		<link rel="manifest" href="images/favicons/site.webmanifest">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg position-absolute" navbar-dark">
-			<a class="navbar-brand" href="#">
+		<nav class="navbar navbar-expand-lg position-absolute">
+			<a class="navbar-brand" href="/index.html">
 				<img src="images/favicons/favicon.ico" width="48" height="48"
 						alt="Easterlies" class="d-inline-block align-top">
 			</a>
@@ -36,9 +36,16 @@
 			</div>
 		</nav>
 		
-		<div id="main-text" class="jumbotron position-absolute"">
-			<h1 class="display-1 text-primary">Easterlies</h1>
-			<p class="display-3 text-primary">Tutaj jakieś hasło fajne(To zdjęcie obciąć z wysokości?)</p>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div id="main-text" class="position-absolute">
+							<p class="h2 text-secondary">Twój samochód</p>
+							<p class="h2 text-secondary">też może</p>
+							<h1 class="display-3 text-primary">błyszczeć</h1>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<img alt="main image" src="/images/images/main-image.jpg" class="img-fluid">
@@ -50,9 +57,11 @@
 						<div class="card-body">
 							<p>
 								Witamy na naszej stronie jesteśmy firmą zajmującą się usługami związanymi z pięlęgnacją
-								tapicerki samochodowej. W swojej ofercie mamy usługi które przywrócą dawny blask elementom
-								wewnątrz Towjego samochodu. Specjalizujemy się w regeneracji elementów skórzanych. Nie jest
-								dla nas naprawa przetartej skóry, regeneracja zniszczonych boczką a również innych defektów.
+								tapicerki samochodowej.
+								Zajmujemy się
+								- czyszczeniem i praniem tapicerek
+								- renowacja elementów skórzanych i materiałowych
+								- czyszczeniem wnętrza samochodu
 							</p>
 						</div>
 					</div>
@@ -66,19 +75,47 @@
 			
 			<div class="row mt-3">
 				<div class="col-sm-6">
-					<img alt="localization" src="/images/images/hover-0.jpg" class="img-fluid">
+					<div class="hover-container">
+						<img alt="localization" src="/images/images/hover-0.jpg" class="img-fluid hover-image">
+						<div class="hover-text">
+							<a href="/services.html#complex-renowation" class="btn btn-outline-primary btn-lg">
+								Kompleksowa renowacja
+							</a>
+						</div>
+					</div>
 				</div>
 				<div class="col-sm-6">
-					<img alt="localization" src="/images/images/hover-1.jpg" class="img-fluid">
+					<div class="hover-container">
+						<img alt="localization" src="/images/images/hover-1.jpg" class="img-fluid hover-image">
+						<div class="hover-text">
+							<a href="/services.html#side-of-seat" class="btn btn-outline-primary btn-lg">
+								Zniszczone boczki foteli
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="col-sm-6">
-					<img alt="localization" src="/images/images/hover-2.jpg" class="img-fluid">
+					<div class="hover-container">
+						<img alt="localization" src="/images/images/hover-2.jpg" class="img-fluid hover-image">
+						<div class="hover-text">
+							<a href="/services.html#tape-item" class="btn btn-outline-primary btn-lg">
+								Obijanie elementów
+							</a>
+						</div>
+					</div>
 				</div>
 				<div class="col-sm-6">
-					<img alt="localization" src="/images/images/hover-3.jpg" class="img-fluid">
+					<div class="hover-container">
+						<img alt="localization" src="/images/images/hover-3.jpg" class="img-fluid hover-image">
+						<div class="hover-text">
+							<a href="/services.html#clean" class="btn btn-outline-primary btn-lg">
+								Czyszczenie tapicerki
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

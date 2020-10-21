@@ -11,8 +11,8 @@
 		<link rel="manifest" href="images/favicons/site.webmanifest">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">
+		<nav class="navbar navbar-expand-lg">
+			<a class="navbar-brand" href="/index.html">
 				<img src="images/favicons/favicon.ico" width="48" height="48"
 						alt="Easterlies" class="d-inline-block align-top">
 			</a>
@@ -35,6 +35,41 @@
 				</ul>
 			</div>
 		</nav>
+
+		<div class="container">
+			<div class="row mt-3">
+				<div class="col-sm-6">
+					<div class="card">
+						<div class="card-body">
+				            <div class="address">
+				                <h4>Easterlies</h4>
+				                <p>Siedliska 18A</p>
+				                <p>36-042 Lubenia</p>
+				            </div>
+				            <div class="communication">
+				                <p>Tel.: <span>+48 606 457 027</span></p>
+				                <p>Email: <span>contact@easterlies.pl(jeszcze nie ma)</span></p>
+				            </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+		            <h3>Jak dojechać</h3>
+		            <div id="map"></div>
+				</div>
+			</div>
+		</div>
 	</body>
 	<script src="scripts.js" charset="utf-8"></script>
+	<script>
+		function initMap() {
+		    var uluru = {lat: 49.940444, lng: 21.916389};
+		    var map = new google.maps.Map(
+		        document.getElementById('map'), {zoom: 10, center: uluru});
+		    var marker = new google.maps.Marker({position: uluru, map: map});
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmU43zFBgLCBqgE3wCRqRM7DoWlZjU7qk&callback=initMap">
+	</script>
+</script>
 </html>
