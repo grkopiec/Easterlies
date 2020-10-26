@@ -36,3 +36,37 @@
 	opacity: 1;
 }
 
+.footer {
+    background-color: $footer-background-color;
+    color: $footer-text-color;
+    text-align: center;
+
+    .about-us {
+    	font-size: 12px;
+    }
+
+    .list-group-item {
+        background-color: $footer-background-color;
+        border: 0;
+        font-size: 12px;
+        padding: 0;
+        text-align: left;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .footer-sign {
+    	font-size: 13px;
+    }
+}
+
+#contact {
+	.footer {
+	    position: fixed;
+	    bottom: 0px;
+	    right: 0px;
+	    left: 0px;
+    }
+}
