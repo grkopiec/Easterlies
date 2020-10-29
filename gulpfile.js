@@ -15,7 +15,8 @@ const paths = {
     ],
     js: [
         'bower_components/jquery/dist/jquery.js',
-        'bower_components/bootstrap/dist/js/bootstrap.js'
+        'bower_components/bootstrap/dist/js/bootstrap.js',
+        'app/scripts/map.js'
     ],
     jsWatch: [
         'app/scripts/**/*.js'
