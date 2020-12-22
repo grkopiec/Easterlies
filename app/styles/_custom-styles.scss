@@ -70,3 +70,31 @@
 	    left: 0px;
     }
 }
+
+.nav {
+	.nav-item.active a {
+		color: $primary;
+	}
+}
+
+#home, #services {
+	.nav {
+		.nav-item.active a {
+			color: $primary;
+		}
+		.nav-item a {
+			color: $white;
+		}
+	}
+}
+
+#contact {
+	.nav {
+		.nav-item.active a {
+			color: $primary;
+		}
+		.nav-item a {
+			color: $black;
+		}
+	}
+}
