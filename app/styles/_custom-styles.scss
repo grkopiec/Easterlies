@@ -71,30 +71,60 @@
     }
 }
 
-.nav {
-	.nav-item.active a {
-		color: $primary;
-	}
-}
-
-#home, #services {
-	.nav {
-		.nav-item.active a {
-			color: $primary;
-		}
-		.nav-item a {
-			color: $white;
-		}
-	}
-}
-
+//navbar
 #contact {
-	.nav {
+	.navbar {
 		.nav-item.active a {
 			color: $primary;
 		}
 		.nav-item a {
 			color: $black;
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	#home, #services {
+		.navbar {
+			//fixed-top css
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: $zindex-fixed;
+			
+			.nav-item.active a {
+				color: $primary;
+			}
+			.nav-item a {
+				color: $white;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	#home {
+		.navbar {
+			background: $primary;
+			
+			.nav-item.active a {
+				color: $black;
+			}
+			.nav-item a {
+				color: $white;
+			}
+		}
+	}
+	
+	#services {
+		.navbar {
+			.nav-item.active a {
+				color: $primary;
+			}
+			.nav-item a {
+				color: $black;
+			}
 		}
 	}
 }
