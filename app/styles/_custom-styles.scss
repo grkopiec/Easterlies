@@ -62,15 +62,6 @@
     }
 }
 
-#contact {
-	.footer {
-	    position: fixed;
-	    bottom: 0px;
-	    right: 0px;
-	    left: 0px;
-    }
-}
-
 //navbar
 #contact {
 	.navbar {
@@ -126,5 +117,37 @@
 				color: $black;
 			}
 		}
+	}
+}
+
+//content
+@include media-breakpoint-down(sm) {
+	#home, #contact {
+		.container .row .col-md-6:first-child  {
+			margin-bottom: 1rem !important;
+		}
+	}
+	
+	#services .container {
+		#complex-renowation, #tape-item {
+			.col-md-6:first-child {
+				margin-bottom: 1rem !important;
+			}
+		}
+	
+		#side-of-seat, #clean {
+		    display: flex;
+		    flex-direction: column-reverse;
+		    
+		    .col-md-6:last-child {
+		    	margin-bottom: 1rem !important;
+		    }
+		}
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	#home .container .row .col-sm-6:first-child  {
+		margin-bottom: 1rem !important;
 	}
 }
