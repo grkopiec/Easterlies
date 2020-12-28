@@ -151,3 +151,13 @@
 		margin-bottom: 1rem !important;
 	}
 }
+
+//footer
+@include media-breakpoint-up(md) {
+	#contact .footer {
+	    position: fixed;
+	    bottom: 0px;
+	    right: 0px;
+	    left: 0px;
+	}
+}
