@@ -120,6 +120,21 @@
 	}
 }
 
+//main text
+@include media-breakpoint-only(xs) {
+	#main-text {
+		top: 0px;
+		
+		p {
+			margin-bottom: 0px;
+		}
+		
+		h1 {
+			font-size: 40px;
+		}
+	}
+}
+
 //content
 @include media-breakpoint-down(sm) {
 	#home, #contact {
